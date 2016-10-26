@@ -184,6 +184,8 @@
 // Platform navigation
 
 .platform-nav {
+    .sticky;
+    text-align: center;
     background: #1f366c;
 
     ul {
@@ -191,10 +193,10 @@
         padding: 0;
 
         li {
-            .font-size(24px);
+            .font-size(22px);
             .inline-block;
-            margin: 0 40px;
-            padding: @baseLine 0;
+            margin: 0 30px;
+            padding: 15px 0 10px;
 
             a:link,
             a:visited {
@@ -215,7 +217,7 @@
     @media only screen and (max-width: @breakDesktop) {
 
         ul li {
-            .font-size(22px);
+            .font-size(20px);
         }
     }
 
@@ -226,24 +228,7 @@
         }
 
         ul li {
-            .font-size(20px);
-            background: #dcdcdc;
-            border-top: 2px solid #fff;
-            display: block;
-            margin: 0;
-            padding: (@baseLine / 2) 0;
-            width: auto;
-
-            a:link,
-            a:visited {
-                color: @linkBlue;
-            }
-
-            a:hover,
-            a:active,
-            a:focus {
-                color: @linkBlueHover;
-            }
+            margin: 0 15px;
         }
     }
 }
@@ -271,19 +256,6 @@ html[lang^="en"] {
     a:hover {
         cursor: default;
     }
-
-    @media only screen and (max-width: @breakTablet) {
-        background: #1f366c;
-        border-bottom: none;
-
-        a:link,
-        a:visited,
-        a:hover,
-        a:active,
-        a:focus {
-            color: #fff;
-        }
-    }
 }
 
 /*--------------------------------------------------------------------------*/
@@ -292,6 +264,12 @@ html[lang^="en"] {
 .channel {
     padding-top: @baseLine * 2;
     text-align: center;
+
+    &:target {
+        padding-top: 100px; /* It should be higher than the sticky .platform-nav
+                               so that the section's content is fully visible
+                               when an in-page anchor is used, e.g. #nightly */
+    }
 
     header {
         background-position: top left;
