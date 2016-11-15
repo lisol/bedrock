@@ -6,10 +6,4 @@
 
 {% add_lang_files "mozorg/home/index-2016" %}
 
-{% block fx_copy %}
-  <h2>The Web is yours</h2>
-
-  <p>
-    Explore it your way with the speed and security of Firefox.
-  </p>
-{% endblock %}
+{% block body_class %}{{ super() }} variant-b{% endblock %}

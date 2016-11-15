@@ -6,12 +6,9 @@
     'use strict';
 
     var cop = new Mozilla.TrafficCop({
-        id: 'experiment-home-fx-copy',
+        id: 'experiment-home-fundraising-2016',
         variations: {
-            'v=a': 25,
-            'v=b': 25,
-            'v=c': 25,
-            'v=d': 25 // double control group
+            'v=b': 50
         }
     });
 
