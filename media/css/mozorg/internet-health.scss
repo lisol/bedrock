@@ -141,6 +141,20 @@ main {
 }
 
 html[dir="rtl"] {
+    .masthead-nav-main {
+        left: auto;
+        right: 0;
+
+        .nav-main-menu {
+            a:active,
+            a:focus,
+            a:hover {
+                border-right: none;
+                border-left: 6px solid $colorLink;
+            }
+        }
+    }
+
     @media #{$mq-tablet} {
         #masthead .masthead-nav-main .nav-main-menu li {
             border-left: none;
@@ -159,8 +173,8 @@ html[dir="rtl"] {
 .main-heading-container {
     @include background-size(cover, 100%);
     background-color: $colorLink;
-    background-image: url('/media/img/mozorg/internet-health/header-small.jpg'),
-                      -webkit-linear-gradient(left, #79337c 0%, #4f2877 100%);
+    // for IE 9 and old webkit
+    background-image: url('/media/img/mozorg/internet-health/header-small.jpg');
     background-image: url('/media/img/mozorg/internet-health/header-small.jpg'),
                       linear-gradient(to right, #79337c 0%, #4f2877 100%);
     background-position: bottom right, center;
@@ -168,6 +182,7 @@ html[dir="rtl"] {
     margin-bottom: 40px;
     padding: 60px 0 0;
     position: relative;
+    text-align: center;
 
     .content {
         padding: 0 10px 20px;
@@ -176,10 +191,9 @@ html[dir="rtl"] {
 
     h1 {
         @include font-size(28px);
-        color: black;
+        color: #000;
         font-weight: bold;
         line-height: 1.4;
-        text-align: center;
 
         span {
             background-color: $colorHeading;
@@ -189,8 +203,7 @@ html[dir="rtl"] {
 
     p {
         @include font-size(16px);
-        color: white;
-        text-align: center;
+        color: #fff;
     }
 
     @media #{$mq-phone-wide} {
@@ -210,16 +223,14 @@ html[dir="rtl"] {
         }
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/mozorg/internet-health/header-medium.jpg'),
-                              -webkit-linear-gradient(left, #79337c 0%, #4f2877 100%);
+            background-image: url('/media/img/mozorg/internet-health/header-medium.jpg');
             background-image: url('/media/img/mozorg/internet-health/header-medium.jpg'),
                               linear-gradient(to right, #79337c 0%, #4f2877 100%);
         }
     }
 
     @media #{$mq-tablet} {
-        background-image: url('/media/img/mozorg/internet-health/header-medium.jpg'),
-                          -webkit-linear-gradient(left, #79337c 0%, #4f2877 100%);
+        background-image: url('/media/img/mozorg/internet-health/header-medium.jpg');
         background-image: url('/media/img/mozorg/internet-health/header-medium.jpg'),
                           linear-gradient(to right, #79337c 0%, #4f2877 100%);
         padding: 80px 0 20px 0;
@@ -242,16 +253,14 @@ html[dir="rtl"] {
         }
 
         @media #{$mq-high-res} {
-            background-image: url('/media/img/mozorg/internet-health/header-large.jpg'),
-                              -webkit-linear-gradient(left, #79337c 0%, #4f2877 100%);
+            background-image: url('/media/img/mozorg/internet-health/header-large.jpg');
             background-image: url('/media/img/mozorg/internet-health/header-large.jpg')
                               linear-gradient(to right, #79337c 0%, #4f2877 100%);
         }
     }
 
     @media #{$mq-desktop} {
-        background-image: url('/media/img/mozorg/internet-health/header-large.jpg'),
-                          -webkit-linear-gradient(left, #79337c 0%, #4f2877 100%);
+        background-image: url('/media/img/mozorg/internet-health/header-large.jpg');
         background-image: url('/media/img/mozorg/internet-health/header-large.jpg')
                           linear-gradient(to right, #79337c 0%, #4f2877 100%);
         padding: 60px 0 20px 0;
@@ -274,8 +283,7 @@ html[dir="rtl"] {
     }
 
     @media #{$mq-desktop-wide} {
-        background-image: url('/media/img/mozorg/internet-health/header-xlarge.jpg'),
-                          -webkit-linear-gradient(left, #79337c 0%, #4f2877 100%);
+        background-image: url('/media/img/mozorg/internet-health/header-xlarge.jpg');
         background-image: url('/media/img/mozorg/internet-health/header-xlarge.jpg')
                           linear-gradient(to right, #79337c 0%, #4f2877 100%);
         background-position: top -100px center, center;
@@ -283,7 +291,7 @@ html[dir="rtl"] {
 }
 
 /*--------------------------------------------------------------------------*/
-// Technologies section
+// Pillars section
 
 #pillars > section {
     margin-bottom: 20px;
@@ -291,10 +299,10 @@ html[dir="rtl"] {
     text-align: center;
 
     .content {
-        @include background-size(220px 220px);
+        @include background-size(180px 180px);
         background-position: top center;
         background-repeat: no-repeat;
-        padding-top: 240px;
+        padding-top: 220px;
     }
 
     .inner-container {
@@ -304,7 +312,7 @@ html[dir="rtl"] {
 
     h2 {
         @include font-size(22px);
-        color: black;
+        color: #000;
         font-weight: bold;
         line-height: 1.4;
         text-align: center;
@@ -329,9 +337,10 @@ html[dir="rtl"] {
         overflow: hidden;
     }
 
-    .footer-hr:after{
+    .footer-hr:after {
         display: block;
         overflow: hidden;
+        speak: none;
     }
 
     .footer-top {
@@ -340,7 +349,7 @@ html[dir="rtl"] {
 
     @media #{$mq-phone-wide} {
         .content {
-            @include background-size(260px 260px);
+            @include background-size(220px 220px);
             padding-top: 280px;
         }
 
@@ -451,7 +460,7 @@ html[dir="rtl"] {
     }
 }
 
-html[dir="rtl"] #technologies > section {
+html[dir="rtl"] #pillars > section {
     @media #{$mq-tablet} {
         h2 {
             text-align: right;
@@ -529,7 +538,7 @@ html[dir="rtl"] #technologies > section {
         @include font-size(38px);
         color: $colorDecentralization;
         content: '[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[';
-        letter-spacing: 0.2em;
+        letter-spacing: 0.18em;
 
         @media #{$mq-tablet} {
             @include font-size(50px);
@@ -583,7 +592,7 @@ html[dir="rtl"] #technologies > section {
         @include font-size(28px);
         color: $colorLiteracy;
         content: '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@';
-        letter-spacing: 0.3em;
+        letter-spacing: 0.26em;
 
         @media #{$mq-tablet} {
             @include font-size(36px);
@@ -601,12 +610,12 @@ html[dir="rtl"] #technologies > section {
 // Newsletter
 
 #newsletter-subscribe {
-    background: white;
-    color: black;
+    background: #fff;
+    color: #000;
     margin: 0;
 
     a {
-        color: black;
+        color: #000;
     }
 
     button,
@@ -634,6 +643,10 @@ html[dir="rtl"] #technologies > section {
             padding-top: 20px;
         }
     }
+}
+
+html[dir="rtl"] #newsletter-subscribe h3 {
+    text-align: right;
 }
 
 /*--------------------------------------------------------------------------*/
@@ -669,12 +682,14 @@ html[dir="rtl"] #technologies > section {
 
     a:link,
     a:visited {
+        color: $colorLink;
         text-decoration: none;
     }
 
     a:hover,
     a:active,
     a:focus {
+        color: #0081ad;
         text-decoration: underline;
     }
 
@@ -688,15 +703,6 @@ html[dir="rtl"] #technologies > section {
             font-weight: bold;
             line-height: 1.3;
             max-width: 24em;
-
-            a:link,
-            a:visited {
-                color: $colorLink;
-            }
-
-            a:hover {
-                color: #0081ad;
-            }
         }
 
         p {
@@ -712,13 +718,8 @@ html[dir="rtl"] #technologies > section {
         .continue {
             @include font-size(16px);
             bottom: 20px;
-            color: $colorLink;
             font-weight: bold;
             position: absolute;
-
-            &:hover {
-                color: #0081ad;
-            }
         }
     }
 
@@ -827,4 +828,9 @@ html[dir="rtl"] #blogs {
 #colophon {
     background: #56565a;
     color: #d1d2d3;
+    margin-top: 0;
+}
+
+html[dir="rtl"] #colophon .col-2 ul li {
+    float: right;
 }

@@ -161,6 +161,20 @@ body {
     }
 }
 
+html[dir="rtl"] .masthead-nav-main {
+    left: auto;
+    right: 0;
+
+    .nav-main-menu {
+        a:active,
+        a:focus,
+        a:hover {
+            border-right: none;
+            border-left: 6px solid $color-mozred;
+        }
+    }
+}
+
 main {
     overflow: hidden;
     padding: 0 10px;

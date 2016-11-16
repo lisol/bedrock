@@ -1,19 +1,23 @@
+{% set logo_src = static('img/home/2016/mozilla-wordmark.svg') %}
+
 <header class="section masthead" id="masthead">
   <div class="content">
+  {% if is_home %}
     <h1 class="masthead-logo">
-    {% if is_home %}
-      <img src="{{ static('img/home/2016/mozilla-wordmark.svg') }}" alt="Mozilla">
-    {% else %}
-      <a href="{{ url('mozorg.home') }}">
-        <img src="{{ static('img/home/2016/mozilla-wordmark.svg') }}" alt="Mozilla">
-      </a>
-    {% endif %}
+      <img src="{{ logo_src }}" alt="Mozilla">
     </h1>
+  {% else %}
+    <h2 class="masthead-logo">
+      <a href="{{ url('mozorg.home') }}">
+        <img src="{{ logo_src }}" alt="Mozilla">
+      </a>
+    </h2>
+  {% endif %}
     {{ download_firefox(alt_copy=_('Download Firefox'), dom_id='nav-download-firefox') }}
     <nav class="masthead-nav-main" id="nav-main">
       <span class="toggle" role="button" aria-controls="nav-main-menu" aria-expanded="false" tabindex="0">{{ _('Menu') }}</span>
       <ul class="nav-main-menu" id="nav-main-menu">
-        {% if LANG.startswith('en-') %}
+      {% if LANG.startswith('en-') %}
         <li class="first internet-health-item">
           <a href="{{ url('mozorg.internet-health') }}" data-link-type="nav" data-link-name="Internet Health">{{ _('Internet Health') }}</a>
         </li>
@@ -21,14 +25,14 @@
           {# L10n: these strings are both potential navigation labels #}
           <a href="{{ url('mozorg.technology') }}" data-link-type="nav" data-link-name="Web Innovations" data-alt-text="{{ _('Innovations') }}">{{ _('Web Innovations') }}</a>
         </li>
-        {% else %}
+      {% else %}
         <li class="first about-item">
           <a href="{{ url('mozorg.about') }}" data-link-type="nav" data-link-name="About">{{ _('About') }}</a>
         </li>
         <li class="contribute-item">
           <a href="{{ url('mozorg.contribute.index') }}" data-link-type="nav" data-link-name="Participate">{{ _('Participate') }}</a>
         </li>
-        {% endif %}
+      {% endif %}
         <li class="donate-item">
           <a href="{{ donate_url('header') }}" data-link-type="nav" data-link-name="Donate">{{ _('Donate') }}</a>
         </li>

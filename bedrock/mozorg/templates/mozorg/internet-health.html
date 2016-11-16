@@ -26,13 +26,12 @@
       <header class="main-heading">
         <h1><span>{{ _('A healthy Internet needs all of us') }}</span></h1>
         <p>
-          {{ _('At Mozilla, we see the Internet as our largest shared global resource.') }}
-
-          {{ _('The healthier it is, the more it benefits everyone.') }}
-
-          {{ _('We can all be a part of keeping the Internet open, safe and accessible.') }}
-
-          {{ _('Here’s how we can all be a part of keeping the Internet open, safe and accessible.') }}
+        {% trans %}
+          At Mozilla, we see the Internet as our largest shared global resource.
+          The healthier it is, the more it benefits everyone. We can all be a
+          part of keeping the Internet open, safe and accessible. Here’s how we
+          can all be a part of keeping the Internet open, safe and accessible.
+        {% endtrans %}
         </p>
       </header>
     </div>
@@ -45,16 +44,9 @@
           <h2><span>{{ _('Exercise your right to privacy') }}</span></h2>
           <p>
           {% trans %}
-            Privacy doesn’t mean you have something to hide.
-          {% endtrans %}
-
-          {% trans %}
-            It means you have the ability to choose who knows where you go and
-            what you do.
-          {% endtrans %}
-
-          {% trans %}
-            At Mozilla, we provide tools and fight for policies that respect
+            Privacy doesn’t mean you have something to hide. It means you have
+            the ability to choose who knows where you go and what you do. At
+            Mozilla, we provide tools and fight for policies that respect
             people’s identity and data across the Internet.
           {% endtrans %}
           </p>
@@ -85,22 +77,18 @@
           <p>
           {% trans %}
             Everyone deserves the ability to create and compete online without
-            paying for permission.
-          {% endtrans %}
-
-          {% trans %}
-            With open standards at the heart of our mission, we create
-            opportunities for people to innovate collectively through shared
-            ideas and code.
+            paying for permission. With open standards at the heart of our
+            mission, we create opportunities for people to innovate collectively
+            through shared ideas and code.
           {% endtrans %}
           </p>
 
           <ul class="ctas">
             <li>
-              <a href="https://toolkit.mozilla.org/">{{ _('Explore our Open Innovation Toolkit') }}</a>
+              <a rel="external" href="https://toolkit.mozilla.org/">{{ _('Explore our Open Innovation Toolkit') }}</a>
             </li>
             <li>
-              <a href="https://science.mozilla.org/">{{ _('Visit the Mozilla Science Lab') }}</a>
+              <a rel="external" href="https://science.mozilla.org/">{{ _('Visit the Mozilla Science Lab') }}</a>
             </li>
           </ul>
         </div>
@@ -120,11 +108,7 @@
           {% trans %}
             When just a few organizations and governments control the majority
             of online content and access, the vital flow of ideas and knowledge
-            is blocked.
-          {% endtrans %}
-
-          {% trans %}
-            We champion an internet that belongs to the people.
+            is blocked. We champion an internet that belongs to the people.
           {% endtrans %}
           </p>
 
@@ -149,12 +133,9 @@
           <p>
           {% trans %}
             The quality of the Internet is a reflection of the diversity of the
-            people who are able to access and contribute to it.
-          {% endtrans %}
-
-          {% trans %}
-            We create technology, policy and outreach programs that welcome all
-            people online, regardless of race, income, nationality, or gender.
+            people who are able to access and contribute to it. We create
+            technology, policy and outreach programs that welcome all people
+            online, regardless of race, income, nationality, or gender.
           {% endtrans %}
           </p>
 
@@ -179,19 +160,15 @@
           <p>
           {% trans %}
             Everyone should have the skills to read, write and participate in
-            the digital world.
-          {% endtrans %}
-
-          {% trans %}
-            Mozilla provides technology and education programs that lift
-            everyone’s online skills — so that they can go beyond consuming and
-            contribute to the future of the Internet.
+            the digital world. Mozilla provides technology and education
+            programs that lift everyone’s online skills — so that they can go
+            beyond consuming and contribute to the future of the Internet.
           {% endtrans %}
           </p>
 
           <ul class="ctas">
             <li>
-              <a href="https://learning.mozilla.org/">{{ _('Get started with the Mozilla Learning Network') }}</a>
+              <a rel="external" href="https://learning.mozilla.org/">{{ _('Get started with the Mozilla Learning Network') }}</a>
             </li>
           </ul>
         </div>
